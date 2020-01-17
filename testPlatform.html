@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script>
+            
+        var compositeFarm = function(id,method,action){
+                this.implementInterfaces = ['Composite','FormItem'];
+        }
+
+        // function for inheritence check. 
+        function inheritenceCheck(nObject){
+                for(var i = 1; i < arguments.length;i++){
+                    var interfaceName = arguments[i];
+                    var interfaceFound = false;
+                        for( var j=0; j < nObject.implementInterfaces.length; j++){
+                                if(interfaceName === nObject.implementInterfaces[j]){
+                                   interfaceFound = true; 
+                                    break;
+                                }
+                        }
+                    if(!interfaceFound){
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            var formInstance = {
+                implementInterfaces : ['Composite','FormItem']
+            };
+            console.log("Inheritence is implemented:  " + inheritenceCheck(formInstance,'Composite','FormItem'));
+
+
+    </script>
+    
+</head>
+<body>
+<p>Test Platform for the inheritence</p>    
+</body>
+</html>
