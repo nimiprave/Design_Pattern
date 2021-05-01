@@ -38,7 +38,7 @@
 
 // copy function
 function clone(object){
-    function F(){};
+    function F(){}
     F.prototype = object;
     return new F();
 }
@@ -66,21 +66,6 @@ author.getName = function(){
 console.log(author.getName());
 
 
-
-
-if( 
-    ( 
-        ("TASKB"='') and                      ("VALUE_FROM"='')and
-        ("COUNT">='1') 
-    ),'','X'
-)
-
-if( 
-    ( 
-        ("TASKB"='') and               ("VALUE_FROM"='')and
-        (int("COUNT") >=1) 
-    ),'','X'
-)
 
 
 
